@@ -1,12 +1,20 @@
 :root {
   --slateBlue: hsl(252, 100%, 67%);
   --royalBlue: hsl(241, 81%, 54%);
-  --VioletBlue: hsla(256, 72%, 46%, 1);
-  --PersianBlue: hsla(241, 72%, 46%, 0);
+  --VioletBlue: hsla(256, 72%, 46%, 0.5);
+  --PersianBlue: hsla(241, 71%, 19%, 0.5);
   --White: hsl(0, 0%, 100%);
   --Paleblue: hsl(221, 100%, 96%);
   --Lightlavender: hsl(241, 100%, 89%);
   --Darkgrayblue: hsl(224, 30%, 27%);
+}
+
+:root {
+  --LightRed: hsla(0, 100%, 67%, 0.1);
+  --OrangeYellow: hsl(39, 100%, 56%, 0.1);
+  --GreenYeal: hsl(166, 100%, 37%, 0.1);
+  --CobaltBlue: hsl(234, 85%, 45%, 0.1);
+  --Darkgrayblue2: hsl(224, 30%, 27%);
 }
 
 /* font-family: 'Anton', sans-serif;
@@ -39,6 +47,18 @@ body {
   height: 520px;
   width: 740px;
   display: flex;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.73);
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.73);
+  min-width: 375px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
 }
 
 .circle {
@@ -53,6 +73,9 @@ body {
   border-radius: 15px;
 }
 
+.title {
+  color: var(--Darkgrayblue2);
+}
 .circle-container {
   height: 200px;
   width: 200px;
@@ -63,10 +86,39 @@ body {
   border-radius: 100%;
   background: linear-gradient(to bottom, var(--VioletBlue), var(--PersianBlue));
 }
-
 .summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
   width: 100%;
   height: 100%;
+}
+
+.div-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 290px;
+  height: 55px;
+  border-radius: 15px;
+
+  padding-right: 10px;
+  margin: 10px;
+}
+
+button {
+  width: 290px;
+  height: 55px;
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: var(--Darkgrayblue2);
+  color: white;
+  margin-top: 30px;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, var(--slateBlue), var(--royalBlue));
 }
 
 p {
@@ -86,4 +138,14 @@ h1 {
 h2 {
   font-size: 32px;
   color: white;
+}
+
+.vote {
+  color: var(--Darkgrayblue);
+}
+
+.text-containerOne {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
